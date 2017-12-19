@@ -1,0 +1,22 @@
+{
+  "orderId": 1234412,
+  "totalPrice": 168,
+  "orderedAt": "2015-04-09T17:30:47.556Z",
+  "esitmatedDelivery": "2015-04-09T17:50:47.556Z",
+  "status": "baking",
+  "cart": [
+    {
+      "menuItemId": 2,
+      "quantity": 1
+    },
+    {
+      "menuItemId": 3,
+      "quantity": 1
+    },
+    {
+      "menuItemId": 6,
+      "quantity": 2
+    }
+  ],
+  "restuarantId": 1
+}
