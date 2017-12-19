@@ -8,6 +8,7 @@ import com.ada.ulrShortener.api.menu.MenuItemType;
 import com.ada.ulrShortener.api.order.Order;
 import com.ada.ulrShortener.api.order.OrderRequest;
 import com.ada.ulrShortener.api.order.OrderResponse;
+import com.ada.ulrShortener.api.restaurant.Restaurant;
 import com.ada.ulrShortener.repositories.RestaurantRepository;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -25,6 +26,11 @@ public class RestaurantServiceImpl implements RestaurantService {
   @Autowired
   private RestaurantServiceImpl(final RestaurantRepository restaurantRepository) {
     this.restaurantRepository = restaurantRepository;
+  }
+
+  @Override
+  public Restaurant getDetails(Long id){
+    return restaurantRepository.findOne(id);
   }
 
   @Override

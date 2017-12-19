@@ -34,19 +34,19 @@ class RestaurantController {
 
   @RequestMapping(value = "/{id}", method = RequestMethod.GET)
   @ResponseBody
-  public List<MenuItem> findOne(@PathVariable("id") Long id) {
+  public Restaurant findOne(@PathVariable("id") Long id) {
 //    return new ModelAndView("redirect:" + service.findUrl(url).getUrl());
-    return service.getMenu(id);
+    return service.getDetails(id);
   }
-
-  @RequestMapping(method = RequestMethod.POST)
-  @ResponseStatus(HttpStatus.CREATED)
-  @ResponseBody
-  public OrderResponse create(@RequestBody OrderRequest resource)
-      throws MalformedURLException, ExecutionException, InterruptedException {
-//    return urlCreator.createFullUrl(service.urlToShorten(resource).get().getId());
-//    return service.placeOrder(resource).get();
-    return null;
-  }
+//
+//  @RequestMapping(method = RequestMethod.POST)
+//  @ResponseStatus(HttpStatus.CREATED)
+//  @ResponseBody
+//  public OrderResponse create(@RequestBody OrderRequest resource)
+//      throws MalformedURLException, ExecutionException, InterruptedException {
+////    return urlCreator.createFullUrl(service.urlToShorten(resource).get().getId());
+////    return service.placeOrder(resource).get();
+//    return null;
+//  }
 
 }
