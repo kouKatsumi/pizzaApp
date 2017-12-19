@@ -9,7 +9,7 @@ import java.util.List;
 public interface Restaurant {
   public long getId();
   public Adress getAddress();
-  public String name();
+  public String getName();
   public List<MenuItem> getMenu();
 
 

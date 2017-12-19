@@ -35,9 +35,16 @@ class RestaurantController {
   @RequestMapping(value = "/{id}", method = RequestMethod.GET)
   @ResponseBody
   public Restaurant findOne(@PathVariable("id") Long id) {
-//    return new ModelAndView("redirect:" + service.findUrl(url).getUrl());
     return service.getDetails(id);
   }
+
+   @RequestMapping(method = RequestMethod.GET)
+  @ResponseBody
+  public List<Restaurant> findOne() {
+    return service.getRestaurants();
+  }
+
+
 //
 //  @RequestMapping(method = RequestMethod.POST)
 //  @ResponseStatus(HttpStatus.CREATED)

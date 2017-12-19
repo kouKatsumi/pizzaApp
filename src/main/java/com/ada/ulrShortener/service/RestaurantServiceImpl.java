@@ -44,4 +44,9 @@ public class RestaurantServiceImpl implements RestaurantService {
 //        Collectors.toList());
     return null;
   }
+
+  @Override
+  public List<Restaurant> getRestaurants() {
+    return restaurantRepository.findAll().stream().map(r -> (Restaurant)r).collect(Collectors.toList());
+  }
 }

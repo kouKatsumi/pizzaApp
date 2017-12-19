@@ -47,7 +47,7 @@ public class RestaurantImpl implements Restaurant{
   }
 
   @Override
-  public String name() {
+  public String getName() {
     return name;
   }
 
