@@ -16,6 +16,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -30,8 +32,9 @@ public class RestaurantImpl implements Restaurant{
   private AdressImpl adress;
   @Column
   private String name;
-  @ElementCollection
-  private List<MenuItemImpl> ingredients;
+
+  @OneToMany
+  private List<MenuItemImpl> menuItems;
 
   @Override
   public long getId() {
@@ -50,6 +53,6 @@ public class RestaurantImpl implements Restaurant{
 
   @Override
   public List<MenuItem> getMenu() {
-    return ingredients.stream().map(i -> (MenuItem)i).collect(Collectors.toList());
+    return menuItems.stream().map(i -> (MenuItem)i).collect(Collectors.toList());
   }
 }

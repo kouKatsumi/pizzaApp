@@ -16,6 +16,8 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import org.hibernate.annotations.CollectionType;
 
 @Entity
@@ -36,7 +38,8 @@ public class FoodItemImpl implements FoodItem {
   private MenuItemType type;
 
 //  @CollectionType(parameters = LIST)
-  @ElementCollection
+  @ManyToMany
+//  @ElementCollection
   private List<IngredientImpl> ingredients;
 
   @Override
