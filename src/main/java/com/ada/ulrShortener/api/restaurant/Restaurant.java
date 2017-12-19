@@ -7,10 +7,14 @@ import com.ada.ulrShortener.api.menu.MenuItem;
 import java.util.List;
 
 public interface Restaurant {
+
   public long getId();
+
   public Adress getAddress();
+
   public String getName();
-  public List<MenuItem> getMenu();
+
+  public List<? extends MenuItem> getMenu();
 
 
 }

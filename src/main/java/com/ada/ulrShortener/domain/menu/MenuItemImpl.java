@@ -12,9 +12,11 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
 
-@Entity
-public class MenuItemImpl implements MenuItem{
+//@Entity
+@MappedSuperclass
+public class MenuItemImpl implements MenuItem {
 
   @Column
   @Id

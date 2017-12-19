@@ -38,9 +38,15 @@ class RestaurantController {
     return service.getDetails(id);
   }
 
+  @RequestMapping(value = "/{id}/menu", method = RequestMethod.GET)
+  @ResponseBody
+  public List<? extends MenuItem> getMenu(@PathVariable("id") Long id) {
+    return service.getMenu(id);
+  }
+
    @RequestMapping(method = RequestMethod.GET)
   @ResponseBody
-  public List<Restaurant> findOne() {
+  public List<? extends Restaurant> findOne() {
     return service.getRestaurants();
   }
 

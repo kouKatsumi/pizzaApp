@@ -3,10 +3,12 @@ INSERT INTO RESTAURANT (name, address1, address2, latitude, longitude) VALUES
   ('Pizzeria Apan', 'Långholmsgatan 34', '117 33 Stockholm', '59.315709', '18.033507');
 
 
-INSERT INTO FOOD_ITEM_IMPL (id, name, price, type) VALUES
-  ('1', 'Vesuvius', '79', 'pizza'),
-  ('2', 'Hawaii', '79', 'pizza'),
-  ('3', 'Parma', '89', 'pizza');
+INSERT INTO FOOD_ITEM_IMPL (id, name, price, type, restaurant_id) VALUES
+  ('1', 'Vesuvius', '79', 'PIZZA','1'),
+  ('2', 'Hawaii', '79', 'PIZZA', '1'),
+  ('3', 'Parma', '89', 'PIZZA','2');
+
+
 
 INSERT INTO INGREDIENT_IMPL (name) VALUES
   ('tomat'),
@@ -32,12 +34,12 @@ INSERT INTO FOOD_ITEM_IMPL_INGREDIENTS (food_item_impl_id, ingredients_name) VAL
   ('3', 'Färska basilika');
 
 
-INSERT INTO DRINK_ITEM_IMPL (id, name, price, type) VALUES
-  ('4', 'Coca-cola, 33cl', '10', 'drink'),
-  ('5', 'Loka citron, 33cl', '10', 'drink');
+INSERT INTO DRINK_ITEM_IMPL (id, name, price, type, restaurant_id) VALUES
+  ('4', 'Coca-cola, 33cl', '10', 'DRINK', '2'),
+  ('5', 'Loka citron, 33cl', '10', 'DRINK', '2');
 
 
-INSERT INTO MENU_ITEM_IMPL (id, name, price, type) VALUES
-  ('6', 'Pizzasallad', '0', 'additional'),
-  ('7', 'Bröd och smör"', '10', 'additional');
+-- INSERT INTO MENU_ITEM_IMPL (id, name, price, type) VALUES
+--   ('6', 'Pizzasallad', '0', 'additional'),
+--   ('7', 'Bröd och smör"', '10', 'additional');
 

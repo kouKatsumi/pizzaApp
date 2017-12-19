@@ -12,8 +12,8 @@ public interface RestaurantService {
 
   Restaurant getDetails(Long id);
 
-  public List<MenuItem> getMenu(Long id);
-  public List<MenuItem> getMenuItemsByType(MenuItemType type);
+  public List<? extends MenuItem> getMenu(Long id);
+  public List<? extends MenuItem> getMenuItemsByType(MenuItemType type);
 
-  List<Restaurant> getRestaurants();
+   List<? extends Restaurant> getRestaurants();
 }

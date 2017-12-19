@@ -9,6 +9,8 @@ import com.ada.ulrShortener.api.order.Order;
 import com.ada.ulrShortener.api.order.OrderRequest;
 import com.ada.ulrShortener.api.order.OrderResponse;
 import com.ada.ulrShortener.api.restaurant.Restaurant;
+import com.ada.ulrShortener.domain.menu.MenuItemImpl;
+import com.ada.ulrShortener.domain.restaurant.RestaurantImpl;
 import com.ada.ulrShortener.repositories.RestaurantRepository;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -34,19 +36,19 @@ public class RestaurantServiceImpl implements RestaurantService {
   }
 
   @Override
-  public List<MenuItem> getMenu(Long id) {
+  public List<MenuItemImpl> getMenu(Long id) {
     return restaurantRepository.findOne(id).getMenu();
   }
 
   @Override
-  public List<MenuItem> getMenuItemsByType(final MenuItemType type) {
+  public List<MenuItemImpl> getMenuItemsByType(final MenuItemType type) {
 //    return restaurantRepository.findMenuItemImplByType(type).stream().map(i -> (MenuItem)i).collect(
 //        Collectors.toList());
     return null;
   }
 
   @Override
-  public List<Restaurant> getRestaurants() {
-    return restaurantRepository.findAll().stream().map(r -> (Restaurant)r).collect(Collectors.toList());
+  public List<RestaurantImpl> getRestaurants() {
+    return restaurantRepository.findAll();
   }
 }

@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface FoodItem extends MenuItem {
 
-  public List<Ingredient> getIngredients();
+  public List<? extends Ingredient> getIngredients();
 }

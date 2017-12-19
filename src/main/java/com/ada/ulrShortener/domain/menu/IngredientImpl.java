@@ -9,7 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class IngredientImpl implements Ingredient{
+public class IngredientImpl implements Ingredient {
 
   //TODO: Not sure if that should be an id
   @Id

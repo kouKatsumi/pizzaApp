@@ -6,5 +6,10 @@ package com.ada.ulrShortener.api.menu;
 public enum MenuItemType {
   DRINK,
   PIZZA,
-  ADDITIONAL
+  ADDITIONAL;
+
+  @Override
+  public String toString() {
+    return super.toString().toLowerCase();
+  }
 }
